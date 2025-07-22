@@ -87,7 +87,7 @@ class FormerServiceProvider extends ServiceProvider
 		$app->bindIf('files', 'Illuminate\Filesystem\Filesystem');
 		$app->bindIf('url', 'Illuminate\Routing\UrlGenerator');
 
-		// Adding this line for only for instantiating
+		// Custom code lines to make it work on php8.3
 		$app->bindIf(
 		\Illuminate\Routing\RouteCollectionInterface::class,
 		\Illuminate\Routing\RouteCollection::class);
